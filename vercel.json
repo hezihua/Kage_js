@@ -1,20 +1,5 @@
 {
-  "version": 2,
-  "name": "kage-js-docs",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "docs"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/docs/$1"
-    }
-  ],
-  "outputDirectory": "docs"
+  "buildCommand": "npm run docs:build",
+  "outputDirectory": "docs",
+  "installCommand": "npm install"
 }
