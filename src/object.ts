@@ -77,12 +77,12 @@ export function set<T extends Record<string, any>>(
 export function merge<T extends Record<string, any>>(
   target: T,
   ...sources: Array<Record<string, any>>
-): T {
+): any {
   for (const source of sources) {
     for (const key in source) {
       if (Object.prototype.hasOwnProperty.call(source, key)) {
         const sourceValue = source[key];
-        const targetValue = target[key];
+        const targetValue = (target as any)[key];
 
         if (
           typeof sourceValue === 'object' &&
@@ -92,9 +92,9 @@ export function merge<T extends Record<string, any>>(
           targetValue !== null &&
           !Array.isArray(targetValue)
         ) {
-          target[key] = merge({ ...targetValue }, sourceValue as any);
+          (target as any)[key] = merge({ ...targetValue }, sourceValue);
         } else {
-          target[key] = sourceValue as any;
+          (target as any)[key] = sourceValue;
         }
       }
     }
