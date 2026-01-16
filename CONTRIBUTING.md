@@ -16,15 +16,15 @@ Kage.js 的目标是提供一个现代化、类型安全、高性能的 JavaScri
 ### 克隆项目
 
 ```bash
-git clone https://github.com/your-username/kage-js.git
-cd kage-js
+git clone https://github.com/hezihua/Kage-js.git
+cd wssf-kage-js
 npm install
 ```
 
 ## 📁 项目结构
 
 ```
-kage-js/
+wssf-kage-js/
 ├── src/                    # 源代码
 │   ├── array.ts           # 数组操作
 │   ├── object.ts          # 对象操作
@@ -338,7 +338,7 @@ Closes #issue_number
 
 **最小可复现示例**
 \`\`\`typescript
-import { someFunc } from 'kage-js';
+import { someFunc } from 'wssf-wssf-kage-js';
 someFunc([1, 2, 3]);
 \`\`\`
 ```

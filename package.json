@@ -5,10 +5,19 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hezihua/Kage-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hezihua/Kage-js/issues"
+  },
+  "homepage": "https://github.com/hezihua/Kage-js#readme",
   "scripts": {
     "build": "rollup -c",
     "docs": "typedoc",
     "docs:watch": "typedoc --watch",
+    "docs:build": "typedoc",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -23,10 +32,17 @@
     "functional",
     "array",
     "object",
-    "string"
+    "string",
+    "typescript",
+    "helpers",
+    "utils",
+    "tools"
   ],
-  "author": "",
+  "author": "hezihua <2283462371@qq.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/jest": "^29.5.11",

@@ -13,19 +13,25 @@
 ## 📦 安装
 
 ```bash
-npm install kage-js
+npm install wssf-kage-js
 ```
 
 或使用 yarn:
 
 ```bash
-yarn add kage-js
+yarn add wssf-kage-js
+```
+
+或使用 pnpm:
+
+```bash
+pnpm add wssf-kage-js
 ```
 
 ## 🚀 快速开始
 
 ```typescript
-import { chunk, camelCase, debounce, range } from 'kage-js';
+import { chunk, camelCase, debounce, range } from 'wssf-kage-js';
 
 // 数组操作
 chunk([1, 2, 3, 4, 5], 2);
@@ -50,7 +56,7 @@ range(5);
 判断数据类型的工具函数。
 
 ```typescript
-import { isNil, isArray, isObject, isEmpty } from 'kage-js';
+import { isNil, isArray, isObject, isEmpty } from 'wssf-kage-js';
 
 isNil(null);           // => true
 isArray([1, 2, 3]);    // => true
@@ -73,7 +79,7 @@ isEmpty([]);           // => true
 强大的数组处理工具。
 
 ```typescript
-import { chunk, uniq, flatten, shuffle } from 'kage-js';
+import { chunk, uniq, flatten, shuffle } from 'wssf-kage-js';
 
 // 分块
 chunk([1, 2, 3, 4, 5], 2);
@@ -115,7 +121,7 @@ shuffle([1, 2, 3, 4, 5]);
 灵活的对象处理方法。
 
 ```typescript
-import { get, set, merge, pick, omit } from 'kage-js';
+import { get, set, merge, pick, omit } from 'wssf-kage-js';
 
 const obj = { a: { b: { c: 3 } } };
 
@@ -158,7 +164,7 @@ omit({ a: 1, b: 2, c: 3 }, ['b']);
 丰富的字符串处理工具。
 
 ```typescript
-import { camelCase, snakeCase, kebabCase, truncate } from 'kage-js';
+import { camelCase, snakeCase, kebabCase, truncate } from 'wssf-kage-js';
 
 // 驼峰命名
 camelCase('hello-world');
@@ -194,7 +200,7 @@ truncate('hello world', { length: 8 });
 高阶函数和函数式编程工具。
 
 ```typescript
-import { debounce, throttle, once, memoize, curry } from 'kage-js';
+import { debounce, throttle, once, memoize, curry } from 'wssf-kage-js';
 
 // 防抖
 const debouncedFn = debounce(() => {
@@ -235,7 +241,7 @@ curriedAdd(1)(2)(3); // => 6
 常用的数学计算工具。
 
 ```typescript
-import { range, random, clamp, mean, max, min } from 'kage-js';
+import { range, random, clamp, mean, max, min } from 'wssf-kage-js';
 
 // 生成数字范围
 range(5);

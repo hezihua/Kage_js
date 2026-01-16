@@ -14,9 +14,11 @@
 ## 安装
 
 ```bash
-npm install kage-js
+npm install wssf-kage-js
 # 或
-yarn add kage-js
+yarn add wssf-kage-js
+# 或
+pnpm add wssf-kage-js
 ```
 
 ## 快速开始
@@ -24,7 +26,7 @@ yarn add kage-js
 ### 全量导入
 
 ```typescript
-import * as kage from 'kage-js';
+import * as kage from 'wssf-kage-js';
 
 kage.chunk([1, 2, 3, 4], 2);
 kage.camelCase('hello-world');
@@ -33,7 +35,7 @@ kage.camelCase('hello-world');
 ### 按需导入（推荐）
 
 ```typescript
-import { chunk, camelCase } from 'kage-js';
+import { chunk, camelCase } from 'wssf-kage-js';
 
 chunk([1, 2, 3, 4], 2);
 camelCase('hello-world');
@@ -45,10 +47,10 @@ camelCase('hello-world');
 
 ```typescript
 // ✅ 好的做法
-import { chunk, uniq } from 'kage-js';
+import { chunk, uniq } from 'wssf-kage-js';
 
 // ❌ 不推荐
-import * as kage from 'kage-js';
+import * as kage from 'wssf-kage-js';
 ```
 
 配合现代打包工具（如 Webpack、Rollup、Vite），Tree-shaking 会自动移除未使用的代码。
@@ -60,7 +62,7 @@ import * as kage from 'kage-js';
 #### 基础操作
 
 ```typescript
-import { head, last, tail, slice } from 'kage-js';
+import { head, last, tail, slice } from 'wssf-kage-js';
 
 const arr = [1, 2, 3, 4, 5];
 
@@ -73,7 +75,7 @@ slice(arr, 1, 3); // [2, 3]
 #### 去重
 
 ```typescript
-import { uniq, uniqBy } from 'kage-js';
+import { uniq, uniqBy } from 'wssf-kage-js';
 
 // 简单去重
 uniq([1, 2, 2, 3, 3]);
@@ -92,7 +94,7 @@ uniqBy(users, (u) => u.id);
 #### 扁平化
 
 ```typescript
-import { flatten, flattenDeep } from 'kage-js';
+import { flatten, flattenDeep } from 'wssf-kage-js';
 
 // 浅层扁平化
 flatten([1, [2, 3], [4]]);
@@ -106,7 +108,7 @@ flattenDeep([1, [2, [3, [4]]]]);
 #### 分块
 
 ```typescript
-import { chunk } from 'kage-js';
+import { chunk } from 'wssf-kage-js';
 
 chunk([1, 2, 3, 4, 5], 2);
 // => [[1, 2], [3, 4], [5]]
@@ -121,7 +123,7 @@ const pages = chunk(items, pageSize);
 #### 集合操作
 
 ```typescript
-import { difference, intersection } from 'kage-js';
+import { difference, intersection } from 'wssf-kage-js';
 
 // 差集
 difference([1, 2, 3], [2, 3, 4]);
@@ -137,7 +139,7 @@ intersection([1, 2, 3], [2, 3, 4]);
 #### 嵌套属性访问
 
 ```typescript
-import { get, set } from 'kage-js';
+import { get, set } from 'wssf-kage-js';
 
 const data = {
   user: {
@@ -162,7 +164,7 @@ set(data, 'user.profile.email', 'zhang@example.com');
 #### 对象合并
 
 ```typescript
-import { merge } from 'kage-js';
+import { merge } from 'wssf-kage-js';
 
 const defaults = {
   theme: 'light',
@@ -194,7 +196,7 @@ const config = merge({}, defaults, userConfig);
 #### 属性选择与排除
 
 ```typescript
-import { pick, omit } from 'kage-js';
+import { pick, omit } from 'wssf-kage-js';
 
 const user = {
   id: 1,
@@ -216,7 +218,7 @@ const safeUser = omit(user, ['password']);
 #### 深拷贝
 
 ```typescript
-import { cloneDeep } from 'kage-js';
+import { cloneDeep } from 'wssf-kage-js';
 
 const original = {
   name: '张三',
@@ -236,7 +238,7 @@ cloned.address.city = '上海'; // 不会影响原对象
 #### 命名风格转换
 
 ```typescript
-import { camelCase, snakeCase, kebabCase } from 'kage-js';
+import { camelCase, snakeCase, kebabCase } from 'wssf-kage-js';
 
 const str = 'hello world example';
 
@@ -259,7 +261,7 @@ const frontendData = Object.fromEntries(
 #### 字符串处理
 
 ```typescript
-import { capitalize, truncate, trim, repeat } from 'kage-js';
+import { capitalize, truncate, trim, repeat } from 'wssf-kage-js';
 
 capitalize('hello');  // 'Hello'
 
@@ -280,7 +282,7 @@ repeat('*', 5);         // '*****'
 #### 防抖（Debounce）
 
 ```typescript
-import { debounce } from 'kage-js';
+import { debounce } from 'wssf-kage-js';
 
 // 搜索框输入防抖
 const searchInput = document.getElementById('search');
@@ -300,7 +302,7 @@ debouncedSearch.cancel();
 #### 节流（Throttle）
 
 ```typescript
-import { throttle } from 'kage-js';
+import { throttle } from 'wssf-kage-js';
 
 // 滚动事件节流
 const throttledScroll = throttle(() => {
@@ -316,7 +318,7 @@ throttledScroll.cancel();
 #### 只执行一次
 
 ```typescript
-import { once } from 'kage-js';
+import { once } from 'wssf-kage-js';
 
 // 初始化只执行一次
 const initialize = once(() => {
@@ -332,7 +334,7 @@ initialize(); // 不执行
 #### 记忆化
 
 ```typescript
-import { memoize } from 'kage-js';
+import { memoize } from 'wssf-kage-js';
 
 // 缓存计算结果
 const fibonacci = memoize((n: number): number => {
@@ -350,7 +352,7 @@ fibonacci.cache.clear();
 #### 柯里化
 
 ```typescript
-import { curry } from 'kage-js';
+import { curry } from 'wssf-kage-js';
 
 const add = (a: number, b: number, c: number) => a + b + c;
 const curriedAdd = curry(add);
@@ -365,7 +367,7 @@ curriedAdd(1, 2, 3);     // 6
 ### 数学运算
 
 ```typescript
-import { range, random, clamp, mean, max, min } from 'kage-js';
+import { range, random, clamp, mean, max, min } from 'wssf-kage-js';
 
 // 生成数字序列
 range(5);           // [0, 1, 2, 3, 4]
@@ -392,7 +394,7 @@ min([3, 1, 5, 2]);          // 1
 ### 场景 1: 表单数据处理
 
 ```typescript
-import { pick, isEmpty, trim } from 'kage-js';
+import { pick, isEmpty, trim } from 'wssf-kage-js';
 
 interface FormData {
   username: string;
@@ -425,7 +427,7 @@ function validateAndSubmit(formData: FormData) {
 ### 场景 2: 数据转换
 
 ```typescript
-import { mapValues, camelCase, get } from 'kage-js';
+import { mapValues, camelCase, get } from 'wssf-kage-js';
 
 // API 响应数据转换
 function transformApiResponse(data: any) {
@@ -444,7 +446,7 @@ function transformApiResponse(data: any) {
 ### 场景 3: 分页处理
 
 ```typescript
-import { chunk, range } from 'kage-js';
+import { chunk, range } from 'wssf-kage-js';
 
 function paginate<T>(items: T[], pageSize: number) {
   const pages = chunk(items, pageSize);
@@ -466,7 +468,7 @@ console.log(pagination.getPage(1)); // [1, 2, 3, ..., 10]
 ### 场景 4: 性能优化
 
 ```typescript
-import { debounce, throttle, memoize } from 'kage-js';
+import { debounce, throttle, memoize } from 'wssf-kage-js';
 
 // 搜索优化
 const expensiveSearch = debounce((query: string) => {
@@ -491,16 +493,16 @@ const expensiveCalculation = memoize((input: number) => {
 
 ```typescript
 // ✅ 推荐
-import { chunk, uniq } from 'kage-js';
+import { chunk, uniq } from 'wssf-kage-js';
 
 // ❌ 不推荐
-import * as kage from 'kage-js';
+import * as kage from 'wssf-kage-js';
 ```
 
 ### 2. 类型安全
 
 ```typescript
-import { get } from 'kage-js';
+import { get } from 'wssf-kage-js';
 
 interface User {
   name: string;
@@ -521,7 +523,7 @@ const name = get<string>(user, 'name');
 ### 4. 深拷贝的性能考虑
 
 ```typescript
-import { cloneDeep } from 'kage-js';
+import { cloneDeep } from 'wssf-kage-js';
 
 // 对于简单对象，使用展开运算符更快
 const simple = { a: 1, b: 2 };
@@ -535,7 +537,7 @@ const copy2 = cloneDeep(complex);
 ### 5. 函数组合
 
 ```typescript
-import { compose, pipe } from 'kage-js';
+import { compose, pipe } from 'wssf-kage-js';
 
 const addOne = (x: number) => x + 1;
 const double = (x: number) => x * 2;

@@ -177,7 +177,7 @@ const short = truncate(longText, { length: 50 });
 
 1. **按需导入**
    ```typescript
-   import { chunk, uniq } from 'kage-js';
+   import { chunk, uniq } from 'wssf-kage-js';
    ```
 
 2. **类型安全**
@@ -187,7 +187,7 @@ const short = truncate(longText, { length: 50 });
 
 3. **链式调用**
    ```typescript
-   import { pipe } from 'kage-js';
+   import { pipe } from 'wssf-kage-js';
    const process = pipe(trim, upperCase, (s) => s + '!');
    ```
 

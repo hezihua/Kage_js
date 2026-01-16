@@ -24,7 +24,7 @@ Kage.js 是一个现代化的 JavaScript/TypeScript 工具库，类似于 lodash
 ## 📁 项目结构
 
 ```
-kage-js/
+wssf-kage-js/
 ├── src/                          # 源代码目录
 │   ├── array.ts                 # 数组操作模块（20+ 函数）
 │   ├── object.ts                # 对象操作模块（11+ 函数）
@@ -251,8 +251,8 @@ MIT License - 详见 [LICENSE](./LICENSE) 文件
 
 ## 📞 联系方式
 
-- **Issues**: [GitHub Issues](https://github.com/your-username/kage-js/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/kage-js/discussions)
+- **Issues**: [GitHub Issues](https://github.com/hezihua/Kage-js/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/hezihua/Kage-js/discussions)
 
 ---
 
