@@ -1,0 +1,30 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["src/index.ts"],
+  "out": "docs",
+  "plugin": [],
+  "exclude": ["**/*+(test|spec).ts", "node_modules/**/*"],
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "readme": "README.md",
+  "name": "Kage.js API 文档",
+  "includeVersion": true,
+  "navigationLinks": {
+    "GitHub": "https://github.com/your-username/kage-js"
+  },
+  "sort": ["source-order"],
+  "categorizeByGroup": true,
+  "defaultCategory": "其他",
+  "categoryOrder": [
+    "Lang",
+    "Array",
+    "Object",
+    "String",
+    "Function",
+    "Math",
+    "*"
+  ],
+  "theme": "default",
+  "hideGenerator": true
+}

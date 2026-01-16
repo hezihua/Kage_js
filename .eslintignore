@@ -1,0 +1,7 @@
+node_modules
+dist
+dist-examples
+coverage
+*.js
+!rollup.config.js
+!jest.config.js
